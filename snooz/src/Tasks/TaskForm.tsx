@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { Task } from '../models/Task';
 
-export function TaskForm(props:{name?: string, date?: Date, comment?: string}) {
+export function TaskForm(props:Task) {
     const [taskName, setTaskName] = useState(props.name);
     const [taskDate, setTaskDate] = useState(props.date);
     const [taskComment, setTaskComment] = useState(props.comment);

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Task } from '../models/Task';
-import { Symptom } from '../models/Symptom';
+import React, {useState} from 'react';
+import {Task} from '../models/Task';
+import {Symptom} from '../models/Symptom';
 
-export function Today(props:{tasks: Task[], symptoms: Symptom[]}) {
+export function Today(props: { tasks: Task[], symptoms: Symptom[] }) {
     //tab = 0 -> task tab
     //tab = 1 -> health tab
     const [tab, setTab] = useState(0);
@@ -12,22 +12,21 @@ export function Today(props:{tasks: Task[], symptoms: Symptom[]}) {
         <button onClick={() => setTab(0)}>Tasks</button>
         <button onClick={() => setTab(1)}>Health</button>
     </div>
-    
+
     if (tab == 0) {
         return (<div>
             {header}
             <TaskTab tasks={props.tasks}/>
-            </div>)
-    }
-    else {
+        </div>)
+    } else {
         return (<div>
             {header}
             <HealthTab symptoms={props.symptoms}/>
-            </div>)
+        </div>)
     }
-} 
+}
 
-export function TaskTab(props: {tasks: Task[]}) {
+export function TaskTab(props: { tasks: Task[] }) {
     //{props.tasks.map((task, i) => React.createElement(task, { key: i}))}
     return (
         <div>
@@ -35,9 +34,9 @@ export function TaskTab(props: {tasks: Task[]}) {
                 {props.tasks.map((task, i) => (
                     <li key={i}>
                         <ul>
-                        <li>{task.name}</li>
-                        <li>{task.date?.toString()}</li>
-                        <li>{task.comment}</li>
+                            <li>{task.name}</li>
+                            <li>{task.date?.toString()}</li>
+                            <li>{task.comment}</li>
                         </ul>
                     </li>
                 ))}
@@ -46,16 +45,16 @@ export function TaskTab(props: {tasks: Task[]}) {
     );
 }
 
-export function HealthTab(props: {symptoms: Symptom[]}) {
+export function HealthTab(props: { symptoms: Symptom[] }) {
     return (
         <div>
             <ul className="list-task">
                 {props.symptoms.map((symp, i) => (
                     <li key={i}>
                         <ul>
-                       <li> {symp.name} </li>
-                        <li>{symp.severity} </li>
-                        <li>{symp.why} </li>
+                            <li> {symp.name} </li>
+                            <li>{symp.severity} </li>
+                            <li>{symp.why} </li>
                         </ul>
                     </li>
                 ))}

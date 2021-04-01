@@ -8,18 +8,20 @@ class SymptomsService {
     physical: String[];
     medications: String[];
 
-    constructor () {
+    constructor() {
         this.mental = ['Anxious', 'Depressed', 'Happy'];
         this.physical = ['Headache', 'Nausea', 'Fever'];
         this.medications = ['Tylenol', 'Lexapro', 'Midol'];
     };
 
-    public getMental() : String[] {
+    public getMental(): String[] {
         return this.mental;
     }
-    public getPhysical() : String[] {
+
+    public getPhysical(): String[] {
         return this.physical;
     }
+
     public getMedications(): String[] {
         return this.medications;
     }

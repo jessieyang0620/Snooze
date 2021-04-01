@@ -1,12 +1,12 @@
 /**
- * data store for all the days 
+ * data store for all the days
  */
 
-import { Day } from "../models/Day";
+import {Day} from "../models/Day";
 
 class DaysService {
     data: Map<Date, Day>;
-    
+
     constructor() {
         this.data = new Map<Date, Day>();
     }

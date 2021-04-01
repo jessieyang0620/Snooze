@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Login from "./containers/logistics/Login";
+import Welcome from "./containers/logistics/Welcome";
+import {Container} from "react-bootstrap";
+import SignUp from "./containers/logistics/SignUp";
+import Dashboard from "./containers/logistics/Dashboard";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Container fluid="sm">
+            <Router>
+                <div>
+                    <Switch>
+                        <Route exact path="/">
+                            <Welcome/>
+                        </Route>
+                        <Route path="/login">
+                            <Login/>
+                        </Route>
+                        <Route path="/sign-up">
+                            <SignUp/>
+                        </Route>
+                        <Route path="/dashboard">
+                            <Dashboard/>
+                        </Route>
+                    </Switch>
+                </div>
+            </Router>
+        </Container>
+    );
 }
 
 export default App;

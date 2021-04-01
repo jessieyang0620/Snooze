@@ -1,5 +1,6 @@
 /**
  * symptoms for fake data for symptom components
+ * aka data store for fake symptoms database
  */
 
 class SymptomsService {

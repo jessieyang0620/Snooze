@@ -17,7 +17,7 @@ export default class SignUp extends Component {
                     <FormControl type="password" placeholder="Enter password"/>
                 </FormGroup>
 
-                <Button type="submit" variant="primary" block href="/dashboard">Sign Up</Button>
+                <Button type="submit" variant="primary" block href="/home">Sign Up</Button>
             </form>
         );
     }

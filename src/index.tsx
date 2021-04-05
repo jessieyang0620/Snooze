@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {Today} from './Home/Today';
-import {task1, task2} from './models/Task';
+import App from "./App";
 
 ReactDOM.render(
     <React.StrictMode>
-        <Today tasks={[task1, task2]} symptoms={[]}/>
+        <App/>
     </React.StrictMode>,
     document.getElementById('root')
 );

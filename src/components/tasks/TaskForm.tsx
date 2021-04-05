@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Task} from '../models/Task';
+import {Task} from '../../models/Task';
 
 export function TaskForm(props: { task: Task }) {
     const [taskName, setTaskName] = useState(props.task.name);

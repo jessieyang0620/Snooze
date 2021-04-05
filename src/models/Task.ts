@@ -1,3 +1,7 @@
+/**
+ * represents a task
+ */
+
 export interface Task {
     name?: string,
     date?: Date,

@@ -6,13 +6,13 @@ export interface Task {
 
 //test task for home
 export const task1: Task = {
-    name: "hello",
+    name: "Fold laundry",
     date: new Date(),
-    comment: "hahhfildsjkfdsla"
+    comment: "Don't lose any socks"
 }
 
 export const task2: Task = {
-    name: "goodbye",
+    name: "Get Groceries",
     date: new Date(),
-    comment: "fdsadsadfaf"
+    comment: "NEED ICE CREAM"
 }

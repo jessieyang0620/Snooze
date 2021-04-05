@@ -2,11 +2,11 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import Login from "./containers/logistics/Login";
-import Welcome from "./containers/logistics/Welcome";
 import {Container} from "react-bootstrap";
-import SignUp from "./containers/logistics/SignUp";
-import Dashboard from "./containers/logistics/Dashboard";
+import Login from "./components/logistics/Login";
+import Welcome from "./components/logistics/Welcome";
+import SignUp from "./components/logistics/SignUp";
+import Dashboard from "./components/logistics/Dashboard";
 
 function App() {
     return (
@@ -22,6 +22,9 @@ function App() {
                         </Route>
                         <Route path="/sign-up">
                             <SignUp/>
+                        </Route>
+                        <Route path="/dashboard">
+                            <Dashboard/>
                         </Route>
                         <Route path="/dashboard">
                             <Dashboard/>
